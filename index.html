@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0" />
+      <title>Advanced Task Manager</title>
+      <link
+         rel="stylesheet"
+         href="style.css" />
+   </head>
+   <body>
+      <header class="app-header">
+         <h1>Advanced Task Manager</h1>
+         <p>Plan smarter. Work better.</p>
+      </header>
+
+      <main class="container">
+         <section class="task-form card">
+            <input
+               type="hidden"
+               class="edit-id" />
+            <input
+               type="text"
+               id="task-title"
+               placeholder="Enter task title..." />
+            <select id="task-priority">
+               <option
+                  value="low"
+                  selected
+                  >Low Priority</option
+               >
+               <option value="medium">Medium Priority</option>
+               <option value="high">High Priority</option>
+            </select>
+            <input
+               type="date"
+               id="task-deadline" />
+            <button id="add-task-btn">Add Task</button>
+         </section>
+         <section class="filters">
+            <button
+               data-filter="all"
+               class="active"
+               >All</button
+            >
+            <button data-filter="today">Today</button>
+            <button data-filter="completed">Completed</button>
+         </section>
+
+         <section
+            class="task-list"
+            id="task-list">
+            <table>
+               <thead>
+                  <tr>
+                     <th>Title</th>
+                     <th>Priority</th>
+                     <th>Date</th>
+                     <th>Actions</th>
+                  </tr>
+               </thead>
+
+               <tbody class="tasks-list">
+                  <!-- Tasks rendered here -->
+               </tbody>
+            </table>
+         </section>
+      </main>
+
+      <script src="script.js"></script>
+   </body>
+</html>
